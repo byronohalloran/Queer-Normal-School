@@ -1,0 +1,279 @@
+@font-face {
+    font-family: 'PPNeueMontreal-Regular';
+    src: url('fonts/PPNeueMontreal-Regular.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'PPNeueMontreal-Bold';
+    src: url('fonts/PPNeueMontreal-Bold.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'PPGrafier-Regular';
+    src: url('fonts/PPGrafier-Regular.woff2') format('woff2')
+}
+
+@font-face {
+    font-family: 'TestFoundersGrotesk-Bold';
+    src: url('fonts/TestFoundersGrotesk-Bold.otf') format('otf');
+}
+
+
+@font-face {
+    font-family: 'ABCDiatype-Bold-Trial';
+    src: url('fonts/ABCDiatype-Bold-Trial.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'ABCDiatype-Regular-Trial';
+    src: url('fonts/ABCDiatype-Regular-Trial.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'ABCDiatype-BoldItalic-Trial';
+    src: url('fonts/ABCDiatype-BoldItalic-Trial.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'ABCDiatype-RegularItalic-Trial';
+    src: url('fonts/ABCDiatype-RegularItalic-Trial.woff2') format('woff2');
+}
+
+/*
+mindaro=d7f240
+anti-flashwhite=ebeaeb
+beige=bfafa6
+pink=ffade0
+blush=d71d5b
+*/
+
+body {
+    margin: 0px, 0px, 0px, 0px;
+    min-height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    background-color: #white;
+    overflow-x: none;
+}
+
+h1 {
+    font-family: "PPNeueMontreal-Regular", sans-serif;
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+h2 {}
+
+p {
+    font-family: "PPNeueMontreal-Regular";
+    font-size: 2rem;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    font-family: "PPNeueMontreal-Regular";
+    z-index: 101;
+    color: #d71d5b;
+    /*    mix-blend-mode: difference;*/
+    display: flex;
+}
+
+header.top {
+    top: 0;
+}
+
+header.trial {
+    top: 0;
+    font-family: "PPNeueMontreal-Regular", Times;
+    font-size: 3rem;
+    position: fixed;
+}
+
+header.trial ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+#headerRightPos {
+    left: 60%;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+ul.yearbook {
+    font-size: 1.5em;
+    font-family: "PPNeueMontreal-Regular";
+    z-index: 200;
+    position: absolute;
+    left: 1vw;
+    top: 10vh;
+
+
+}
+
+#ulLeft {
+    margin-left: 2.5%;
+    left: 0;
+}
+
+#ulRight {
+    margin-left: auto;
+    margin-right: 2.5%;
+}
+
+li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image {
+    display: none;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#aUnderline {
+    text-decoration: ;
+}
+
+#time-date {
+    font-family: monospace;
+    opacity: 80%;
+    bottom: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.collageGeneration {
+    position: fixed;
+    width: 15vw;
+    height: auto;
+    opacity: 0;
+}
+
+.collageWrapper {
+    margin: 2.5vh 2.5vh 2.5vh 2.5vh;
+    max-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+}
+
+.homeWelcomeType {
+    position: absolute;
+    left: 1vw;
+    right: 40vw;
+    top: 50vh;
+    z-index: 100;
+}
+
+.homeFacultyType {
+    position: absolute;
+    left: 40vw;
+    top: 50vh;
+}
+
+.homeYearbookType {
+    position: absolute;
+    left: 20vw;
+    right: 20vw;
+    top: 40vh;
+    bottom: 40vh;
+}
+
+.homeWrapperCollage {
+    margin: 2.5vh 2.5vh 2.5vh 2.5vh;
+    max-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+}
+
+.manifestoWrapper {
+    margin: inherit;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    right: 25%;
+}
+
+
+.yearbookType {
+    font-family: "PPNeueMontreal-Regular", serif;
+    font-size: 1.5em;
+    text-align: left;
+    margin-left: 2.5%;
+    top: 10%;
+}
+
+
+footer {
+    margin-left: 0;
+    margin-right: 0;
+    min-height: 50vh;
+    max-width: 100vw;
+    font-family: "PPNeueMontreal-Regular", serif;
+    font-size: 1.5em;
+    text-align left;
+    background-color: grey;
+    color: white;
+}
+
+footer ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    flex-flow: row;
+    justify-content: space-between;
+    align-self: baseline;
+}
+
+footer li:hover {
+    text-decoration: none;
+    cursor: default;
+}
+
+span.rotate {
+    transform: translateX(0px) translateY(0px) rotate(-1deg);
+}
+
+/*
+
+----COLUMNS----
+
+when page is divided by 12, each column has width of 7.9166vw
+
+!if the span doesnt matter, delete width.!
+
+----ROWS----
+
+when row is divided by 4, each row has height of 23.75vh
+
+!if the span doesnt matter, delete height.!
+
+*/

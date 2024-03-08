@@ -379,6 +379,7 @@ span.underline {
     /* Adjust the margin as needed */
 }
 
+
 @media (min-width: 520px) and (max-width:990px) {
     .facultyContainer {
         margin-left: 0;

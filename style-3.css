@@ -84,10 +84,9 @@ html {
 body {
     margin-left: 2.5vw;
     margin-right: 2.5vw;
-    margin-top: 2.5vw;
+    margin-top: 2.5vh;
     margin-bottom: 2.5vh;
     background-color: #EFE6E7;
-    scroll-behavior: smooth;
 }
 
 img {
@@ -98,13 +97,12 @@ img {
 
 h1 {
     font-family: "ABCDiatype-Bold-Trial", sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 h2 {
-    font-family: "ABCDiatype-Light-Trial", sans-serif;
-    font-size: 3rem;
-    text-indent:
+    font-family: "ABCDiatype-Bold-Trial", sans-serif;
+    font-size: 1rem;
 }
 
 h3 {
@@ -156,9 +154,10 @@ a:hover {
 }
 
 header {
-    top: 0px;
+    top: 0;
+    padding-top: 2.5%;
     width: 95vw;
-    max-height: 5vh;
+    padding-bottom: 2.5%;
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -168,57 +167,28 @@ header {
     border-bottom-width: 1pt;
 }
 
+.mainHeader {
+    position: fixed;
+    transition: top 0.5s ease;
+    /* Smooth transition */
+}
+
+
+
 /*As screen approaches 768px nav bar will change to logo on left and menu on right.*/
 
-.dropdownMenu {
-    display: flex;
-    flex-flow: row;
-    background-color: #EFE6E7;
-    font-family: "ABCDiatype-Regular-Trial";
-    position: absolute;
-    left: 90%;
-    top: 100%;
-    max-width: 10%;
-    min-height: 25%;
-    z-index: 1000;
-}
-
-.dropdownMenu a {
-    padding: 10px;
-    text-decoration: none;
-}
-
-.dropdownMenu a:hover {
-    text-decoration: underline;
-}
-
-@media(min-width: 992px) {
-    header.mainHeader {
-        display: visible;
-    }
-
-    header.smallHeader {
-        display: none;
-    }
-}
-
 .headingContainer {
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-bottom: 5rem;
     max-width: 100%;
-    top: 5vh;
+    top: 7.5vh;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 2%;
     overflow-y: hidden;
 }
 
 .homeHeroType {
-    position: relative;
     text-align: center;
-    top: 2vh;
 }
 
 @media (max-width: 991.98px) {
@@ -226,7 +196,6 @@ header {
         margin-left: 0;
         margin-right: 0;
         overflow-y: visible;
-        padding-bottom: 10%;
     }
 
     h1 {
@@ -244,14 +213,6 @@ header {
 
     .homeHeroType {
         top: 9vh;
-    }
-
-    header.mainHeader {
-        display: none;
-    }
-
-    header.smallHeader {
-        display: visible;
     }
 }
 
@@ -302,225 +263,67 @@ span.underline {
 
 /* ABOUT PAGE */
 
+
+.aboutContainer {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-top: 15vh;
+}
+
 .aboutHeading {
-    position: absolute;
-    top: -1vh;
-    left: 0;
+    position: relative;
     transform: rotate(-2deg);
 }
 
 .aboutHeading1 {
-    position: absolute;
-    top: -10vh;
-    left: 0;
+    position: relative;
     transform: rotate(-2deg);
 }
 
 .about2023Heading {
-    position: absolute;
-    top: -1vh;
-    left: 0;
+    position: relative;
     transform: rotate(2deg);
 }
 
 .about2024Heading {
-    position: absolute;
-    top: -1vh;
-    transform: rotate(2deg);
-}
-
-.aboutHeroWrapper {
-    margin-top: 10%;
-    min-height: 100%;
-    max-width: 50%;
-    left: 25%;
     position: relative;
-    display: flex;
-    text-align: justify;
-    padding-bottom: 5%;
+    transform: rotate(2deg);
 }
 
 .aboutHeroType {
     position: relative;
-    max-width: 100%;
-}
-
-.about2023Wrapper {
-    padding-top: 5%;
-    min-height: 100%;
-    max-width: 50%;
-    position: relative;
-    left: 25%;
-    display: flex;
-    text-align: justify;
-    padding-bottom: 5%;
-}
-
-.about2024Wrapper {
-    padding-top: 5%;
-    min-height: 100%;
-    max-width: 50%;
-    left: 25%;
-    position: relative;
-    display: flex;
-    text-align: justify;
-    padding-bottom: 5%;
-}
-
-.aboutPrecedenceWrapper {
-    padding-top: 5%;
-    min-height: 100%;
-    max-width: 50%;
-    left: 25%;
-    position: relative;
-    display: flex;
-    text-align: justify;
-    padding-bottom: 5%;
 }
 
 .aboutJoinUs {
     text-align: left;
 }
 
-@media(min-width: 769px) and (max-width: 2000px) {
-    .aboutHeroWrapper {
-        margin-top: 20vh;
-        left: 12.5%;
-        right: 12.5%;
-        max-width: 75%;
+@media(max-width: 768px) {
+
+    .aboutContainer {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 7.5vh;
     }
 
-    .about2023Wrapper {
-        left: 12.5%;
-        right: 12.5%;
-        max-width: 75%;
-    }
-
-    .about2024Wrapper {
-        left: 12.5%;
-        right: 12.5%;
-        max-width: 75%;
-    }
-
-    .aboutPrecedenceWrapper {
-        left: 12.5%;
-        right: 12.5%;
-        max-width: 75%;
-    }
-}
-
-@media(min-width: 391px) and (max-width: 768px) {
-
-    .about2024Heading {
-        left: 0;
-        transform: rotate(0deg);
-    }
-
-    .about2023Heading {
-        left: 0;
-        transform: rotate(0deg);
-    }
-
-    .aboutHeroWrapper {
-        margin-top: 25%;
-        max-width: 100%;
-        left: 0;
-    }
-
-    .about2023Wrapper {
-        max-width: 100%;
-        left: 0;
-    }
-
-    .about2024Wrapper {
-        max-width: 100%;
-        left: 0;
-    }
-
-    .aboutPrecedenceWrapper {
-        left: 0;
-        max-width: 100%;
-    }
-
-    .aboutHeading {
-        left: 0;
-        transform: rotate(0deg);
-    }
-
+    .about2024Heading,
+    .about2023Heading,
+    .aboutHeading,
     .aboutHeading1 {
-        top: -12%;
         transform: rotate(0deg);
-    }
-}
-
-@media(max-width: 390px) {
-    .about2024Heading {
-        left: 0;
-        transform: rotate(0deg);
-    }
-
-    .about2023Heading {
-        left: 0;
-        transform: rotate(0deg);
-    }
-
-    .aboutHeroWrapper {
-        margin-top: 20%;
-        max-width: 100%;
-    }
-
-    .about2023Wrapper {
-        max-width: 100%;
-        left: 0;
-    }
-
-    .about2024Wrapper {
-        max-width: 100%;
-        left: 0;
-    }
-
-    .aboutPrecedenceWrapper {
-        left: 0;
-        max-width: 100%;
-    }
-
-    .aboutHeading {
-        left: 0;
-        transform: rotate(0deg);
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .aboutHeading1 {
-        top: -7%;
-        transform: rotate(0deg);
-    }
-
-    .aboutHeroWrapper {
-        margin-top: 25%;
-        max-width: 100%;
-        left: 0;
     }
 }
 
 /* FACULTY */
 
-.facultyHeroType {
-    text-align: center;
-    left: 12.5%;
-    right: 12.5%;
-    max-width: 75%;
+.facultyContainer {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-top: 12.5%;
 }
 
-.facultySecondaryType {
-    position: absolute;
+.facultyHeroType {
     text-align: center;
-    left: 22vw;
-    right: 22vw;
-    width: 48vw;
-    top: inherit;
 }
 
 .facultyAccordion {
@@ -528,8 +331,7 @@ span.underline {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 75%;
-    margin: 0 auto;
+    width: 100%;
     /* Center the accordion within its container */
     overflow-x: hidden;
 }
@@ -574,6 +376,11 @@ span.underline {
 
 
 @media (min-width: 520px) and (max-width:990px) {
+    .facultyContainer {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     h1 {
         text-align: center !important;
         align-content: center;
@@ -592,6 +399,11 @@ span.underline {
 }
 
 @media (max-width:519px) {
+    .facultyContainer {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     h1 {
         text-align: center !important;
         align-content: center;
@@ -642,7 +454,7 @@ span.underline {
     position: absolute;
     margin-top: 1%;
     text-align: left;
-    left: 75%;
+    left: 50%;
 }
 
 .footerReturn {
@@ -661,6 +473,9 @@ span.underline {
     text-align: left;
     left: 0;
     bottom: 0;
+    right: 25%;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 @media (max-width: 1200px) {
@@ -680,16 +495,12 @@ span.underline {
 
     .footerCol2 {
         left: 0;
-        top: 50%;
+        top: 15%;
+        padding-left: 0%;
     }
 
     .footerCol4 {
         left: 50%;
-    }
-
-    .footerLogo {
-        bottom: -5%;
-        right: 25%
     }
 }
 
@@ -780,6 +591,13 @@ span.underline {
 
 
 /*YEARBOOK*/
+
+.yearbookContainer {
+    margin-top: 12.5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 .yearbookHeadingWrapper {
     position: fixed;
     top: 55%;
@@ -789,7 +607,13 @@ span.underline {
     /* Ensure it's on top of other content */
     max-width: 100vw;
     width: 50%;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
     /* Adjust width as needed */
+}
+
+.yearbookHeadingWrapper.fade-out {
+    opacity: 0;
 }
 
 .yearbookHeading {
@@ -801,7 +625,7 @@ span.underline {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(4, auto);
     gap: 1rem;
-    margin-top: 10vh;
+    padding-bottom: 5%;
 }
 
 .yearbookGridContainer img,
@@ -1160,6 +984,12 @@ span.underline {
 
 
 @media (min-width:481px) and (max-width: 992px) {
+    .yearbookContainer {
+        margin-top: 12.5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
     .yearbookGridContainer {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -1422,6 +1252,13 @@ span.underline {
 }
 
 @media (max-width:480px) {
+    .yearbookContainer {
+        margin-top: 12.5%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-bottom: 12.5%;
+    }
+
     .yearbookGridContainer {
         margin-top: 0;
         min-height: 100vh;

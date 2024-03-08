@@ -298,3 +298,43 @@ accordionHeaders.forEach(header => {
     // Append plus sign SVG Element to the right of the accordion header
     header.appendChild(plusSVG);
 });
+
+var isScrolling = false;
+var lastScrollTop = 0;
+
+function hideHeading() {
+    var element = document.querySelector('.yearbookHeadingWrapper');
+    if (element) {
+        element.classList.add('fade-out');
+    }
+}
+
+function showHeading() {
+    var element = document.querySelector('.yearbookHeadingWrapper');
+    if (element) {
+        element.classList.remove('fade-out');
+    }
+}
+
+function handleScroll() {
+    var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    var mainHeader = document.querySelector('header.mainHeader');
+
+    if (currentScroll > lastScrollTop) {
+        // Scrolling down
+        hideHeading();
+        if (mainHeader) {
+            mainHeader.style.top = '-100px'; // Move out of the top
+        }
+    } else {
+        // Scrolling up
+        showHeading();
+        if (mainHeader) {
+            mainHeader.style.top = '0'; // Slide down from the top
+        }
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+}
+
+window.addEventListener('scroll', handleScroll, false);

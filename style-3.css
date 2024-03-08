@@ -158,6 +158,7 @@ a:hover {
 header {
     top: 0px;
     width: 95vw;
+    max-height: 5vw;
     display: flex;
     justify-content: space-between;
     position: fixed;

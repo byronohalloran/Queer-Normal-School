@@ -374,6 +374,10 @@ span.underline {
     transform: translateY(-50%);
 }
 
+.plus-sign {
+    margin-right: 10px;
+    /* Adjust the margin as needed */
+}
 
 @media (min-width: 520px) and (max-width:990px) {
     .facultyContainer {
